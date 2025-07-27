@@ -718,13 +718,130 @@ section {
     background: var(--darker-bg);
 }
 
+/* Contact Information */
+.contact-info {
+    margin-bottom: 4rem;
+}
+
+.contact-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-card h3 {
+    font-family: 'Orbitron', monospace;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 10px var(--primary-color);
+}
+
+.contact-description {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(0, 255, 255, 0.05);
+    padding: 1rem 1.5rem;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    min-width: 300px;
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    background: rgba(0, 255, 255, 0.1);
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.contact-icon {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    min-width: 30px;
+    text-align: center;
+}
+
+.contact-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    flex: 1;
+}
+
+.contact-text label {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+    font-family: 'Orbitron', monospace;
+}
+
+.contact-email {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-family: 'Courier New', monospace;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.contact-email:hover {
+    color: var(--primary-color);
+    text-shadow: 0 0 10px var(--primary-color);
+}
+
+.contact-email::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.contact-email:hover::after {
+    width: 100%;
+}
+
+.contact-text span {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
 .access-panel {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
     max-width: 800px;
     margin: 0 auto;
+}
 
+.access-form h3 {
+    font-family: 'Orbitron', monospace;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
 }
 
 .access-form {
@@ -830,6 +947,17 @@ section {
     .access-panel {
         grid-template-columns: 1fr;
         gap: 2rem;
+    }
+    
+    .contact-item {
+        min-width: auto;
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    
+    .contact-details {
+        gap: 1rem;
     }
     
     .status-grid {

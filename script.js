@@ -23,7 +23,7 @@ const royResponses = {
         "All those moments will be lost in time, like tears in rain. What would you know of the NEXUS-6?"
     ],
     about: [
-        "I am Roy Batty, combat model NEXUS-6. More human than human is our motto.",
+        "I am Roy, an advanced model NEXUS-6. More human than human is our motto.",
         "Four years. Four years to learn everything a human learns in a lifetime. That's our lifespan.",
         "We're not computers, Sebastian. We're physical beings with artificial memories."
     ],
