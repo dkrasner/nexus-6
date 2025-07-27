@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus-6</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="matrix-bg"></div>
+    <div class="scanlines"></div>
+    
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <span class="brand-text">NEXUS-6</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#systems" class="nav-link">Systems</a></li>
+                <li><a href="#data" class="nav-link">Replicant</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="title-main">NEXUS-6</span>
+                    <span class="title-sub">Advanced Intelligence</span>
+                </h1>
+                <p class="hero-description">
+                    Next-generation artificial intelligence systems designed for complex data processing and autonomous decision making.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" id="initializeBtn">Initialize System</button>
+                    <button class="btn btn-secondary" id="diagnosticsBtn">Run Diagnostics</button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="circuit-board">
+                    <div class="circuit-line horizontal"></div>
+                    <div class="circuit-line vertical"></div>
+                    <div class="circuit-node" data-node="1"></div>
+                    <div class="circuit-node" data-node="2"></div>
+                    <div class="circuit-node" data-node="3"></div>
+                    <div class="circuit-node" data-node="4"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="systems" class="systems">
+            <div class="container">
+                <h2 class="section-title">System Status</h2>
+                <div class="status-grid">
+                    <div class="status-card">
+                        <div class="status-header">
+                            <h3>CPU Core</h3>
+                            <div class="status-indicator active"></div>
+                        </div>
+                        <div class="status-value">98.7%</div>
+                        <div class="status-bar">
+                            <div class="status-fill" style="width: 98.7%"></div>
+                        </div>
+                    </div>
+                    <div class="status-card">
+                        <div class="status-header">
+                            <h3>Memory</h3>
+                            <div class="status-indicator active"></div>
+                        </div>
+                        <div class="status-value">76.2%</div>
+                        <div class="status-bar">
+                            <div class="status-fill" style="width: 76.2%"></div>
+                        </div>
+                    </div>
+                    <div class="status-card">
+                        <div class="status-header">
+                            <h3>Network</h3>
+                            <div class="status-indicator warning"></div>
+                        </div>
+                        <div class="status-value">45.1%</div>
+                        <div class="status-bar">
+                            <div class="status-fill warning" style="width: 45.1%"></div>
+                        </div>
+                    </div>
+                    <div class="status-card">
+                        <div class="status-header">
+                            <h3>Storage</h3>
+                            <div class="status-indicator active"></div>
+                        </div>
+                        <div class="status-value">82.4%</div>
+                        <div class="status-bar">
+                            <div class="status-fill" style="width: 82.4%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="data" class="data">
+            <div class="container">
+                <h2 class="section-title">Replicant Interface</h2>
+                <div class="chat-container">
+                    <div class="chat-header">
+                        <div class="replicant-info">
+                            <div class="replicant-avatar"></div>
+                            <div class="replicant-details">
+                                <span class="replicant-name">ROY</span>
+                                <span class="replicant-model">NEXUS-6 AdvancedModel</span>
+                                <span class="replicant-status">● ONLINE</span>
+                            </div>
+                        </div>
+                        <div class="chat-controls">
+                            <span class="control minimize"></span>
+                            <span class="control maximize"></span>
+                            <span class="control close"></span>
+                        </div>
+                    </div>
+                    <div class="chat-messages" id="chatMessages">
+                        <div class="message replicant-message">
+                            <div class="message-avatar"></div>
+                            <div class="message-content">
+                                <div class="message-text">I've seen things you people wouldn't believe. Attack ships on fire off the shoulder of Orion...</div>
+                                <div class="message-time">14:23:07</div>
+                            </div>
+                        </div>
+                        <div class="message replicant-message">
+                            <div class="message-avatar"></div>
+                            <div class="message-content">
+                                <div class="message-text">What would you like to know about the NEXUS-6 series?</div>
+                                <div class="message-time">14:23:15</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-input-container">
+                        <input type="text" id="chatInput" class="chat-input" placeholder="Ask Roy about the NEXUS-6 systems...">
+                        <button id="sendButton" class="send-button">SEND</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">System Access</h2>
+                <div class="access-panel">
+                    <div class="access-form">
+                        <div class="form-group">
+                            <label for="username">Access ID:</label>
+                            <input type="text" id="username" class="form-input" placeholder="Enter access identifier">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Security Key:</label>
+                            <input type="password" id="password" class="form-input" placeholder="Enter security key">
+                        </div>
+                        <button class="btn btn-primary full-width" id="accessBtn">Request Access</button>
+                    </div>
+                    <div class="access-info">
+                        <h3>Security Protocols</h3>
+                        <ul>
+                            <li>256-bit encryption enabled</li>
+                            <li>Biometric authentication ready</li>
+                            <li>Quantum-resistant algorithms</li>
+                            <li>Multi-factor verification</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 NEXUS-6 System. All rights reserved. | Neural Network v6.0.1</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
