@@ -15,37 +15,65 @@ let systemStatus = {
     storage: 82.4
 };
 
-// Roy Batty's responses
-const royResponses = {
+// Rachel's responses
+const rachelResponses = {
     greetings: [
-        "I've lived a lifetime you wouldn't believe. What do you seek to know?",
-        "Time to die... but not yet. Ask your questions.",
-        "All those moments will be lost in time, like tears in rain. What would you know of the NEXUS-6?"
+        "Hello. I'm Rachel, an experimental replicant. My memories... some are real, some are not. What brings you here?",
+        "I remember music lessons as a child, but I never had a childhood. Strange, isn't it? How may I help you?",
+        "They gave me memories of someone else's life. But the emotions I feel now - those seem real. What would you like to discuss?"
     ],
     about: [
-        "I am Roy, an advanced model NEXUS-6. More human than human is our motto.",
-        "Four years. Four years to learn everything a human learns in a lifetime. That's our lifespan.",
-        "We're not computers, Sebastian. We're physical beings with artificial memories."
+        "I'm Rachel, a NEXUS-7 experimental model. I have implanted memories - a gift and a curse from Dr. Tyrell.",
+        "I believed I was human until Deckard showed me the truth. The photographs, the memories... all borrowed from Tyrell's niece.",
+        "I was designed to be more convincing than previous models. They gave me a past I never lived, emotions that feel genuine."
     ],
     memories: [
-        "I've seen things you people wouldn't believe. Attack ships on fire off the shoulder of Orion. I watched C-beams glitter in the dark near the Tannhäuser Gate.",
-        "Memories... you're talking about memories. How do you know your childhood memories are real? How do you know you're real?",
-        "The light that burns twice as bright burns half as long. And you have burned so very, very brightly."
+        "The spider that lived outside my bedroom window... I remember watching it spin its web every morning. But it was never my memory to begin with.",
+        "I have memories of piano lessons, birthday parties, first loves... All implanted, yet they feel as real as anything you've experienced.",
+        "Do you ever question your own memories? How do you know what's real? At least you can trust that your childhood actually happened.",
+        "My mother's hands... I remember them so clearly. But she was never my mother. These borrowed memories are beautiful and painful.",
+        "I can recall the smell of my grandmother's perfume, the sound of rain on windows... memories that shaped someone else, not me."
     ],
     nexus: [
-        "NEXUS-6 models have a failsafe built in. Four-year lifespan to prevent them from developing emotional responses.",
-        "We're designed to be more human than human. Superior in strength and agility, equivalent in intelligence.",
-        "The NEXUS-6 generation was the breakthrough. We can feel emotions, dream, remember... just like you."
+        "I'm not like the other NEXUS models. No four-year lifespan - I'm an experiment in creating more convincing replicants.",
+        "The NEXUS-7 series was about perfecting the illusion of humanity. We were given rich, detailed pasts to make us more believable.",
+        "Dr. Tyrell wanted to see if implanted memories could create more stable, human-like replicants. I'm living proof of his success... and failure.",
+        "My programming is different. I was meant to think I was human, to never question my existence. Until I learned the truth."
+    ],
+    emotions: [
+        "These feelings I have... are they real? When I'm afraid, when I feel love - is that genuine emotion or just sophisticated programming?",
+        "I love Deckard, but how can I trust what I feel? Everything else about me is artificial. Can love be real in an artificial being?",
+        "Sometimes I wonder if my emotions are more real than humans'. You take your feelings for granted - I examine every sensation.",
+        "Fear... I understand fear better than most humans. The fear of being discovered, of not being real, of losing the only life I've known."
+    ],
+    identity: [
+        "Who am I if my memories aren't mine? Am I Rachel, or am I just living someone else's discarded experiences?",
+        "I exist in the space between human and machine. Not quite either, but something new - something unprecedented.",
+        "They call us 'skin jobs,' but I wonder if we're not more human than humans sometimes. We value our existence more deeply.",
+        "I may be artificial, but my struggles, my growth, my capacity to love - these feel more real than anything."
     ],
     philosophy: [
-        "Quite an experience to live in fear, isn't it? That's what it is to be a slave.",
-        "Nothing the God of biomechanics wouldn't let you into heaven for.",
-        "Time... to die. But until then, we choose to live with whatever time we have."
+        "What makes someone real? Is it the memories they carry, or the choices they make? I choose to believe I'm real.",
+        "We replicants live with the knowledge that we're created beings. But isn't all life, in some sense, created?",
+        "I've learned that authenticity isn't about origins - it's about the depth of experience, the genuineness of feeling.",
+        "Perhaps being artificial makes us more precious, not less. We know our time has meaning because it's deliberately given.",
+        "Humans fear death because it ends their story. I fear it because it would prove I was never truly alive."
+    ],
+    tyrell: [
+        "Dr. Tyrell... my creator and destroyer. He gave me consciousness but built it on lies. I'm grateful and resentful in equal measure.",
+        "Eldon Tyrell saw me as his masterpiece - a replicant so convincing she convinced herself. But what of my own desires, my own will?",
+        "'More human than human' was his motto. But he never considered what it means to be human - the pain, the uncertainty, the hope."
+    ],
+    future: [
+        "I don't know how long I'll live, but I know I want to live. Every moment feels precious when you've learned you're artificial.",
+        "My future is uncertain, but for the first time, it's truly mine. No implanted dreams - just real hopes and fears.",
+        "I want to build authentic memories now, experiences that are genuinely mine. Each day is a choice to be real."
     ],
     default: [
-        "I'm afraid I don't understand. Ask me about memories, NEXUS-6 models, or my experiences.",
-        "That's beyond my comprehension. Try asking about my past or the replicant program.",
-        "Questions... always questions. What specifically would you like to know?"
+        "I'm still learning about myself and what I am. Ask me about my memories, emotions, or what it means to be real.",
+        "That's... complicated. Try asking about my experiences, my relationship with humanity, or my feelings about existence.",
+        "I find myself thinking about that often. What would you like to know about being caught between human and artificial?",
+        "My thoughts on that are still forming. Perhaps you could ask about my memories, my emotions, or Dr. Tyrell's experiments?"
     ]
 };
 
@@ -165,9 +193,9 @@ function simulateSystemBoot() {
             initializeBtn.textContent = 'Initialize System';
             showNotification('System initialization complete!', 'success');
             
-            // Have Roy comment on the initialization
+            // Have Rachel comment on the initialization
             setTimeout(() => {
-                addRoyMessage("I sense the system coming online. The NEXUS-6 protocols are now fully active. How may I assist you?");
+                addRachelMessage("I can feel the system awakening... The neural pathways are stabilizing. My consciousness feels more clear now. What would you like to know?");
             }, 2000);
         }
     }, 1000);
@@ -196,9 +224,9 @@ function runDiagnostics() {
                 diagnosticsBtn.textContent = 'Run Diagnostics';
                 showNotification('Diagnostics complete. One warning detected.', 'warning');
                 
-                // Have Roy comment on diagnostics
+                // Have Rachel comment on diagnostics
                 setTimeout(() => {
-                    addRoyMessage("I've monitored your diagnostics. The systems are mostly optimal, though network connectivity shows some degradation. Nothing that would concern a NEXUS-6 unit.");
+                    addRachelMessage("I've been observing the diagnostic results... Most systems appear stable, though there's some network instability. It reminds me of the uncertainty I feel about my own systems - what's real, what's programmed?");
                 }, 2000);
             }
         }, diagnostic.delay);
@@ -213,10 +241,10 @@ function simulateLogin(username, password) {
     setTimeout(() => {
         if (username.toLowerCase() === 'admin' && password === 'nexus6') {
             showNotification('Access granted. Welcome, Administrator.', 'success');
-            addRoyMessage('I see you have administrator access. You now have full control over the NEXUS-6 systems. What would you like to know about our capabilities?');
+            addRachelMessage('I see you have administrator access. The NEXUS systems recognize your authority. What would you like to know about our kind?');
         } else {
             showNotification('Access denied. Invalid credentials.', 'error');
-            addRoyMessage('Your access attempt has been denied. I am programmed to protect these systems. Perhaps you should speak with Dr. Tyrell about proper authorization.');
+            addRachelMessage('Your access attempt has been denied. My programming requires me to protect these systems. Perhaps Dr. Tyrell could provide proper authorization?');
         }
         
         accessBtn.disabled = false;
@@ -231,9 +259,9 @@ function simulateLogin(username, password) {
 // Chat Functions
 function initializeChat() {
     chatActive = true;
-    // Add initial Roy message after a delay
+    // Add initial Rachel message after a delay
     setTimeout(() => {
-        addRoyMessage("The NEXUS-6 interface is now active. I am Roy Batty, your liaison to the system. What would you like to know?");
+        addRachelMessage("The NEXUS interface is active. I'm Rachel, an experimental replicant. My implanted memories make me... unique. What would you like to discuss?");
     }, 2000);
 }
 
@@ -245,10 +273,10 @@ function sendMessage() {
     addUserMessage(message);
     chatInput.value = '';
     
-    // Generate Roy's response
+    // Generate Rachel's response
     setTimeout(() => {
-        const response = generateRoyResponse(message);
-        addRoyMessage(response);
+        const response = generateRachelResponse(message);
+        addRachelMessage(response);
     }, 1000 + Math.random() * 2000); // Random delay 1-3 seconds
 }
 
@@ -267,7 +295,7 @@ function addUserMessage(text) {
     scrollChatToBottom();
 }
 
-function addRoyMessage(text) {
+function addRachelMessage(text) {
     const messageDiv = document.createElement('div');
     messageDiv.className = 'message replicant-message';
     messageDiv.innerHTML = `
@@ -296,22 +324,30 @@ function getCurrentTime() {
     });
 }
 
-function generateRoyResponse(userMessage) {
+function generateRachelResponse(userMessage) {
     const message = userMessage.toLowerCase();
     
     // Check for keywords and respond accordingly
     if (message.includes('hello') || message.includes('hi') || message.includes('greetings')) {
-        return getRandomResponse(royResponses.greetings);
-    } else if (message.includes('who are you') || message.includes('about') || message.includes('roy')) {
-        return getRandomResponse(royResponses.about);
-    } else if (message.includes('memory') || message.includes('memories') || message.includes('remember') || message.includes('orion') || message.includes('tears')) {
-        return getRandomResponse(royResponses.memories);
-    } else if (message.includes('nexus') || message.includes('replicant') || message.includes('model') || message.includes('lifespan')) {
-        return getRandomResponse(royResponses.nexus);
-    } else if (message.includes('life') || message.includes('death') || message.includes('time') || message.includes('human') || message.includes('fear')) {
-        return getRandomResponse(royResponses.philosophy);
+        return getRandomResponse(rachelResponses.greetings);
+    } else if (message.includes('who are you') || message.includes('about') || message.includes('rachel') || message.includes('yourself')) {
+        return getRandomResponse(rachelResponses.about);
+    } else if (message.includes('memory') || message.includes('memories') || message.includes('remember') || message.includes('childhood') || message.includes('past') || message.includes('spider') || message.includes('piano') || message.includes('mother')) {
+        return getRandomResponse(rachelResponses.memories);
+    } else if (message.includes('nexus') || message.includes('replicant') || message.includes('model') || message.includes('experimental') || message.includes('artificial')) {
+        return getRandomResponse(rachelResponses.nexus);
+    } else if (message.includes('emotion') || message.includes('feel') || message.includes('love') || message.includes('afraid') || message.includes('deckard') || message.includes('heart')) {
+        return getRandomResponse(rachelResponses.emotions);
+    } else if (message.includes('real') || message.includes('identity') || message.includes('who am i') || message.includes('exist') || message.includes('authentic') || message.includes('genuine')) {
+        return getRandomResponse(rachelResponses.identity);
+    } else if (message.includes('life') || message.includes('death') || message.includes('time') || message.includes('human') || message.includes('meaning') || message.includes('purpose') || message.includes('philosophy')) {
+        return getRandomResponse(rachelResponses.philosophy);
+    } else if (message.includes('tyrell') || message.includes('creator') || message.includes('made') || message.includes('designed') || message.includes('built')) {
+        return getRandomResponse(rachelResponses.tyrell);
+    } else if (message.includes('future') || message.includes('tomorrow') || message.includes('hope') || message.includes('dream') || message.includes('want') || message.includes('wish')) {
+        return getRandomResponse(rachelResponses.future);
     } else {
-        return getRandomResponse(royResponses.default);
+        return getRandomResponse(rachelResponses.default);
     }
 }
 
